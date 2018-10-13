@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --primary-color: #c50505;
+    --secondary-color: #e60606;
 }
 
 html{
@@ -79,7 +81,7 @@ h3{
 h2:after{
     display: block;
     height: 2px;
-    background-color: #c50505;
+    background-color: var(--primary-color);
     content: "";
     width: 100px;
     margin: 0 auto;
@@ -107,7 +109,7 @@ h2:after{
 
 
 .icon-big{
-    color: #c50505;
+    color: var(--primary-color);
     font-size: 300%;
     display: block;
     margin-bottom: 15px;
@@ -117,7 +119,7 @@ h2:after{
     display: inline-block;
     width:30px;
     text-align: center;
-    color: #c50505;
+    color: var(--primary-color);
     font-size: 120%;
     margin-right: 10px;
     
@@ -133,8 +135,8 @@ h2:after{
 a:link, 
 a:visited{
     text-decoration: none;
-    color: #c50505;
-    border-bottom: 1px solid #c50505;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
     transition: border 0.2s, color 0.2s;
 }
 
@@ -164,23 +166,23 @@ input[type=submit]{
 .btn-full:link,
 .btn-full:visited,
 input[type=submit]{
-    background-color: #c50505;
-    border: 1px solid #c50505;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: #FFF;
     margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited{
-    border: 1px solid #c50505;
-    color: #c50505;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active{
-    background-color: #e60606;
+    background-color: var(--secondary-color);;
     
 }
 
@@ -189,12 +191,12 @@ input[type=submit]:active{
 input[type=submit]:hover,
 input[type=submit]:active{
     
-    border: 1px solid #c50505;
+    border: 1px solid var(--primary-color);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active{
-    border: 1px solid #e60606;
+    border: 1px solid var(--secondary-color);
     color: #FFF;
 }
 
@@ -251,7 +253,7 @@ header{
 
 .main-nav li a:hover,
 .main-nav li a:active{
-    border-bottom: 2px solid #c50505; 
+    border-bottom: 2px solid var(--primary-color);
 }
 
 
@@ -292,4 +294,112 @@ header{
 .meal-photo img:hover{
     opacity: 1;
     transform: scale(1.03);
+}
+
+
+/* -------------------------------------------------------*/
+/* FORM */
+/* -------------------------------------------------------*/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea#subject{
+    height: 2rem;
+}
+textarea#message{
+    height: 6rem;
+}
+
+
+*:focus{outline: none}
+
+
+
+/* -------------------------------------------------------*/
+/* FOOTER */
+/* -------------------------------------------------------*/
+
+footer{
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links:last-child{
+    margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 160%;
+}
+
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-instagram,
+.ion-social-googleplus{
+    transition: color 0.2s;
+}
+.ion-social-facebook:hover{
+    color: #3b5998;
+}
+.ion-social-twitter:hover{
+    color: #00aced;
+}
+.ion-social-googleplus:hover{
+    color: #dd4b39;
+}
+.ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
 }
