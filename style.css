@@ -46,6 +46,12 @@ section{
     padding: 1%;
 }
 
+.box .photo{
+    width:75%;
+    display: block;
+    margin: auto;
+}
+
 /* ---------HEADINGS---------- */
 
 h1, h2, h3{
